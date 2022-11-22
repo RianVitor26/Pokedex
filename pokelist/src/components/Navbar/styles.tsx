@@ -15,6 +15,9 @@ export const Container = styled.nav`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
 
     li {
       :nth-child(2) {
@@ -24,11 +27,12 @@ export const Container = styled.nav`
       a {
         color: var(--link-color);
         transition: var(--normal-transition);
-        font-size: clamp(1.4rem, 1.8rem, 10rem);
+        font-size: clamp(1rem, 1.8rem, 10rem);
         position: relative;
         padding: 0.5rem;
+        font-weight: bold;
 
-        :hover{
+        :hover {
           color: var(--link-color-hover);
         }
 

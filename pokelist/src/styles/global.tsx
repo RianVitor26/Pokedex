@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style-type: none;
     text-decoration: none;
     font-size: 1.8rem;
+    font-family: 'Poppins', Verdana, sans-serif;
  }
 
  html{
@@ -22,11 +23,13 @@ export const GlobalStyle = createGlobalStyle`
  :root{
     //COLORS PALLETTE
    --nav-bg: #f6e652;
-   --link-color: black;
-   --link-color-hover: #399494;
+   --link-color: #399494;;
+   --link-color-hover: #3eacac;
+   --light-color: #ebebeb;
+   --buttons-bg: 	#f00000;
+   --buttons-bg-hover: #a30000;
 
    //EFFECTS
-   -noraml-transition: all ease .5s;
-
+   --normal-transition: all ease .5s;
  }
 `;
