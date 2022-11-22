@@ -9,6 +9,12 @@ export const Container = styled.nav`
   justify-content: space-between;
   padding: 0 2rem;
 
+  img{
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+  }
+
   ul {
     width: 100%;
     height: 100%;
