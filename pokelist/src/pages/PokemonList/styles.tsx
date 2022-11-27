@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const bounce = keyframes`
+  0%{
+    transform: translateY(0);
+  }
+
+  25%{
+    transform: translateY(-10px);
+  }
+
+  50%{
+    transform: translateY(0);
+  }
+
+  75%{
+    transform: translateY(-10px);
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -46,7 +64,7 @@ export const PokemonsContainer = styled.div`
     li {
       width: 35rem;
       height: 40rem;
-      background: blue;
+      background: #343ec7;
       display: flex;
       flex-direction: column;
       border-radius: 1rem;
@@ -60,7 +78,7 @@ export const PokemonsContainer = styled.div`
       cursor: pointer;
 
       :hover {
-        transform: translateY(-2rem);
+        animation: ${bounce} .5s ease;
       }
 
       h1 {
@@ -74,14 +92,13 @@ export const PokemonsContainer = styled.div`
         position: absolute;
         top: 1rem;
         right: 1rem;
-        min-width: 8rem;
-        background: pink;
-        padding: 1rem;
+        min-width: 5rem;
+        background: #ffffff;
+        padding: .5rem;
         text-align: center;
         border-radius: 2rem;
         font-weight: bold;
         font-size: clamp(1.2rem, 1.4rem, 10rem);
-        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
       }
 
       img {
@@ -120,16 +137,17 @@ export const PokemonTypes = styled.div`
   h2 {
     margin: 0.3rem;
     transition: var(--normal-transition);
-    background: pink;
+    background: #ffffff;
     text-align: center;
     border-radius: 2rem;
     padding: 0.5rem;
+    min-width: 10rem;
     font-size: clamp(1rem, 1.4rem, 10rem);
     cursor: help;
     :hover {
       transform: scale(1.1);
     }
-    @media only screen and (max-width: 335px) {
+    @media only screen and (max-width: 410px) {
       padding: 0.3rem;
       font-size: 1rem;
     }
